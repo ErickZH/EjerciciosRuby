@@ -1,0 +1,22 @@
+# Escribir un pograma que, dada una lista que include nombre de compositores
+# repetidas veces, nos cuente las veces que ocurre cada uno de los
+# siguientes nombres: Monzart, Haydn, Bach,
+name = %w{MOZART haydn mozart bach BACH Liszt Palestrina}
+m = 0
+h = 0
+b = 0
+o = 0
+name.each do |nombre|
+  nombre = nombre.downcase.capitalize
+  case nombre
+    when "Mozart","mozart" then m+=1
+    when "Haydn", "haydn" then h += 1
+    when "Bach", "bach" then b += 1
+    else
+      o+=1
+  end
+end
+puts "Monzart se repite #{m}"
+puts "Haydn se repite #{h}"
+puts "Bach se repite #{b}"
+puts "Otros: #{o}"

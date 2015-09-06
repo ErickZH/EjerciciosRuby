@@ -1,0 +1,24 @@
+genios = Hash.new
+puts genios["matematicas"] = "Gauss"
+puts genios["genios"] = "Paganini"
+
+lang = {
+    'Perl' => 'Larry',
+    'Python' => 'Guido',
+    'Ruby' => 'Mastsumoto',
+}
+puts lang
+puts lang['Ruby'] #accesa un valor utilizando un indice
+puts lang.has_key?('Java') # pregunta si existe la llave
+puts lang.has_value?('McCarthy') # pregunta si existe el valor
+puts lang.sort #ordena por orden de llave
+puts lang.values_at('Python','Ruby')
+puts lang.values
+puts lang.keys
+puts lang.length # numero de pares en el hash
+
+puts lang['Ruby'] = 'Matz'  # remplaza 'Matsumoto' con 'Matz'
+puts lang['COBOL'] = 'CODASYL' # agrega un nuevo par al hash
+
+
+puts lang.delete('COBOL')
